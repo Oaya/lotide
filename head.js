@@ -1,10 +1,3 @@
-const head = function (array) {
-  if (array === []) {
-    return undefined;
-  }
-  return array[0];
-};
-
 const assertEqual = function (actual, expected) {
   console.log(actual, expected);
   if (actual === undefined) {
@@ -16,6 +9,13 @@ const assertEqual = function (actual, expected) {
   } else {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   }
+};
+
+const head = function (array) {
+  if (array === []) {
+    return undefined;
+  }
+  return array[0];
 };
 
 assertEqual(head([1]));
