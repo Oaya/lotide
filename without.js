@@ -37,12 +37,13 @@ function eqArrays(arr1, arr2) {
 }
 
 const without = (source, itemToRemove) => {
+  let newArray = source;
   for (let i = 0; source.length > i; i++) {
     for (let j = 0; itemToRemove.length > j; j++) {
       if (source[i] === itemToRemove[j]) {
-        source.splice(i, 1);
+        newArray.splice(i, 1);
       }
     }
   }
-  return source;
+  return newArray;
 };
