@@ -7,8 +7,7 @@ const assertArraysEqual = (arr1, arr2) => {
     console.log(`🔴🔴🔴 Comparison Failed: ${arr1} !== ${arr2}`);
     return false;
   }
-  let i = arr1.length;
-  while (i--) {
+  for (let i = 0; arr1.length > i; i++) {
     if (arr1[i] !== arr2[i]) {
       console.log(`🔴🔴🔴 Comparison Failed: ${arr1} !== ${arr2}`);
       return false;
