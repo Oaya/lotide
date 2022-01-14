@@ -23,6 +23,7 @@ const words = ["ground", "control", "to", "major", "tom"];
 const map = function (array, callback) {
   const result = [];
   for (let item of array) {
+    console.log(array, callback);
     result.push(callback(item));
   }
   return result;
