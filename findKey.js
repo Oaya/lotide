@@ -10,6 +10,8 @@ const findKey = (obj, callback) => {
   for (const val in obj) {
     if (callback(obj[val])) {
       return val;
+    } else {
+      return undefined;
     }
   }
 };
@@ -23,7 +25,7 @@ findKey(
     Ora: { stars: 2 },
     Akelarre: { stars: 3 },
   },
-  (x) => x.stars === 2
+  (x) => x.stars === 10
 ); // => "noma"
 
 findKey(
