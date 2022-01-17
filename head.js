@@ -1,4 +1,4 @@
-const head = function (array) {
+const head = function(array) {
   if (array === []) {
     return undefined;
   }
