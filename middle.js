@@ -1,19 +1,19 @@
-function eqArrays(arr1, arr2) {
+const eqArrays = (arr1, arr2) => {
   if (arr1.length !== arr2.length) {
     return false;
   }
+
   if (arr1 === [] || arr2 === []) {
     return false;
   }
-  let i = arr1.length;
-  while (i--) {
+
+  for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] !== arr2[i]) {
       return false;
-    } else {
-      return true;
     }
   }
-}
+  return true;
+};
 
 const assertArraysEqual = (arr1, arr2) => {
   if (arr1.length !== arr2.length) {
@@ -24,8 +24,7 @@ const assertArraysEqual = (arr1, arr2) => {
     console.log(`🔴🔴🔴 Comparison Failed: ${arr1} !== ${arr2}`);
     return false;
   }
-  let i = arr1.length;
-  while (i--) {
+  for (let i = 0; arr1.length > i; i++) {
     if (arr1[i] !== arr2[i]) {
       console.log(`🔴🔴🔴 Comparison Failed: ${arr1} !== ${arr2}`);
       return false;
@@ -38,7 +37,8 @@ const assertArraysEqual = (arr1, arr2) => {
 
 const middle = (array) => {
   const result = [];
-  index = Math.floor(array.length / 2);
+  middleIndex = Math.floor(array.length / 2);
+  console.log(index);
 
   //return an empty if the array length is one or two//
   if (array.length <= 2) {
