@@ -10,7 +10,6 @@ const assertEqual = function (actual, expected) {
 const countLetters = (str) => {
   //take the empty spaces from the string//
   str = str.split(" ").join("");
-
   const result = {};
   //go through eash value in the string//
   for (const letter of str) {
