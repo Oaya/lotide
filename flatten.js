@@ -1,3 +1,6 @@
+const assertArraysEqual = require("./assertArraysEqual");
+const eqArrays = require("./eqArrays");
+
 const mapThrough = (array) => {
   const newArray = [];
   for (let i = 0; array.length > i; i++) {
@@ -20,4 +23,4 @@ const flatten = (array) => {
   return newArray;
 };
 
-flatten([1, 2, [3, 4], 5, [6]]);
+module.exports = flatten;

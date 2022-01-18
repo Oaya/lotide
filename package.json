@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@oaya/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "school project which create clone of lo_dash",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/Oaya/lotide.git"
   },
-  "author": "",
+  "author": "oaya",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Oaya/lotide/issues"
