@@ -1,6 +1,3 @@
-const assertArraysEqual = require("./assertArraysEqual");
-const eqArrays = require("./eqArrays");
-
 const letterPositions = (sentence) => {
   const result = {};
   //go through the sentence//
@@ -10,7 +7,7 @@ const letterPositions = (sentence) => {
       result;
     }
     //check if sentence[i] is exsits in the result//
-    if (!result[sentence[i]]) {
+    else if (!result[sentence[i]]) {
       result[sentence[i]] = [i];
     } else {
       result[sentence[i]].push(i);
