@@ -1,6 +1,3 @@
-const assertArraysEqual = require("./assertArraysEqual");
-const eqArrays = require("./eqArrays");
-
 const mapThrough = (array) => {
   const newArray = [];
   for (let i = 0; array.length > i; i++) {
@@ -15,10 +12,9 @@ const mapThrough = (array) => {
 };
 const flatten = (array) => {
   let newArray = [];
-  if (array === []) {
+  if (array.length === 0 || !Array.isArray(array)) {
     return false;
   }
-
   newArray = mapThrough(array);
   return newArray;
 };

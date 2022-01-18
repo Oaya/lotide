@@ -1,4 +1,4 @@
-const tail = function (array) {
+const tail = function(array) {
   let newArray = [];
   if (array === [] || array.length === 1) {
     return newArray;
