@@ -8,12 +8,16 @@ describe("#letterPosition", () => {
     assert.deepEqual(letterPositions(sentence).e, [1]);
   });
 
-  it(`returns {} for ("hey yo"). `, () => {
+  it(`returns [2, 4] for ("hey yo"). `, () => {
     assert.deepEqual(letterPositions(sentence).y, [2, 4]);
   });
 
-  //check when the charactor is space, return {}
-  // it(`returns {} for ("hey yo"). `, () => {
-  //   assert.deepEqual(letterPositions("hello")., {});
-  // });
+  it(`returns { h: [ 0 ], e: [ 1 ], y: [ 2, 4 ], o: [ 5 ] } for ("hey yo"). `, () => {
+    assert.deepEqual(letterPositions("hey yo"), {
+      h: [0],
+      e: [1],
+      y: [2, 4],
+      o: [5],
+    });
+  });
 });

@@ -16,5 +16,5 @@ const letterPositions = (sentence) => {
 
   return result;
 };
-
+console.log(letterPositions("hey yo"));
 module.exports = letterPositions;
