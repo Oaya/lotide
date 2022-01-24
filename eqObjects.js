@@ -3,22 +3,29 @@ const eqArrays = require("./eqArrays");
 const eqObjects = function (object1, object2) {
   const key1 = Object.keys(object1);
   const key2 = Object.keys(object2);
-
-  // They have the same number of keys
+  // // They have the same number of keys
   if (key1.length !== key2.length) {
     return false;
   }
-  // The value for each key in one object is the same as the value
-  // for that same key in the other object
+  // // The value for each key in one object is the same as the value
+  // // for that same key in the other object
   for (const key of key1) {
     let newObject1 = object1[key];
     let newObject2 = object2[key];
 
+    // console.log(newObject1, newObject2);
     if (Array.isArray(newObject1) && Array.isArray(newObject2)) {
-      if (!eqArrays(newObject1, newObject2)) {
+      if (eqArrays(newObject1, newObject2)) {
+        return true;
+      } else {
         return false;
       }
+    } else {
+      if (typeof newObject1 === "object" && typeof newObject2 === "object") {
+        eqObjects(newObject1, newObject2);
+      }
     }
+
     if (newObject1 !== newObject2) {
       return false;
     }

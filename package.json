@@ -1,6 +1,6 @@
 {
   "name": "@oaya/lotide",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "school project which create clone of lo_dash",
   "main": "assertArraysEqual.js",
   "directories": {
