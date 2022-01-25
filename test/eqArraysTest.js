@@ -29,4 +29,24 @@ describe("#eqArray", () => {
   it(`returns true for compare  ["1", "2" ] , []`, () => {
     assert.isFalse(eqArrays(["1", "2"], []));
   });
+
+  it(`returns true for compare [[2, 3], [4]],  [[2, 3], [4]]`, () => {
+    assert.isTrue(eqArrays([[2, 3], [4]], [[2, 3], [4]]));
+  });
+
+  it(`returns false for compare [[2, 3], [4]],  [[2, 3], [4, 5]]`, () => {
+    assert.isFalse(
+      eqArrays(
+        [[2, 3], [4]],
+        [
+          [2, 3],
+          [4, 5],
+        ]
+      )
+    );
+  });
+
+  it(`returns false for compare [[2, 3], [4]],  [[2, 3], 4]`, () => {
+    assert.isFalse(eqArrays([[2, 3], [4]], [[2, 3], 4]));
+  });
 });
